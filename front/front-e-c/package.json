@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepare": "husky install",
+    "prettier-format": "prettier --config .prettierrc src/app/**/*.ts --write",
+    "lint": "eslint . --ext .ts"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +31,7 @@
     "@angular/compiler-cli": "^16.0.0",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.14",
+    "husky": "^8.0.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -35,7 +39,13 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2",
     "typescript": "~5.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-format && npm run lint"
+    }
   }
 }
