@@ -150,6 +150,7 @@ Para efectos de carga rápida se tiene una estructura modular aprovechando el la
 core/guards, de lo contrario se debe crear una carpeta guards en el módulo específico en donde se requiera el mismo.
 - **i18n** : La aplicación será internacionalizable, por lo que todo texto a renderizar, bien sea en el .html o por data binding, debe ser declarado en su respectivo archivo de idioma "es.json" O "en.json", etc...
 - **Eventos** : Para el manejo de eventos, se debe garantizar que los eventListeners, o las subscripciones sean cerradas una vez cumplan su función o deje de utilizarse el componente/módulo para efectos de rendimiento. En caso de necesitarse manejar muchos eventos para diferentes acciones, es obligatorio la utilización del **patrón de delegación de eventos**.
+- **ApiKeys Secrets, Demás** : Todos los accessos que se requerian deben ir en las variables de entorno, estos archivos no pueden estar en el repositorio remoto por cuestiones de seguridad, por lo que debe asegurarse de no utilizar credenciales de ninguna otra forma a lo largo de aplicación. Deberá solicitar este archivo a su líder técnico. 
 
 
 
