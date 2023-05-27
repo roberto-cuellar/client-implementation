@@ -143,7 +143,7 @@ Para efectos de carga rápida se tiene una estructura modular aprovechando el la
 - **Metodología GitFlow** : Se trabajará con esta metodología, por lo que se tendrá una rama de desarrollo, de la cual se desprenderán las ramas de los features, se debe solicitar PR y superar las pruebas unitarias requeridas por el líder técnico antes de pasar a integrarse a desarrollo. Este ambiente de desarrollo, se replicará al ambiente de producción cuando se tenga el pmv.
 - **Creación de módulo nuevo** : Para esto se debe crear un nuevo módulo en la carpeta modules, debe garantizarse que este módulo se
     cargue de forma perezosa, y tenga su respectivo router y estructura de carpetas internas: components, services, repository, entities, infrastructure, strategies (en caso de que se requiera).
-- **Metodología atómica** : Todo debe estár enfocado a su reutilización e independecia, de tal forma que se puedan construir atomos, celulas,   etc... por medio de la reutilización de los mismos.
+- **Metodología atómica** : Todo debe estár enfocado a su reutilización e independecia, de tal forma que se puedan construir atomos, celulas,   etc... por medio de la reutilización de los mismos. Los estilos estarán en base a SASS, el uso de parciales y mixins para la reutilización de código.
 - **Testing** : Las pruebas unitarias, son obligatorias para componentes transversales.
 - **Token Interceptor** : Existe un interceptor global para firmar las peticiones con el JWT para la gestión de permisos dentro de la aplicación.
 - **Guardianes** : Si un guardian va a ser reutilizado en varias partes de la aplicación, debe ir en la carpeta
