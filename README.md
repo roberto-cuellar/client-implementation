@@ -1,4 +1,4 @@
-# client-implementation project
+# Client-implementation project
 Esta es la primera versión para el proyecto E-Commerce solicitado por cliente, la solución está dada por el cliente (Angular/Vainila) y el servidor (Express). Ambas partes son independientes, es decir no es una aplicación totalmente monolítica. 
 
 ## Front End
@@ -145,6 +145,9 @@ Para efectos de carga rápida se tiene una estructura modular aprovechando el la
     cargue de forma perezosa, y tenga su respectivo router y estructura de carpetas internas: components, services, repository, entities, infrastructure, strategies (en caso de que se requiera).
 - **Metodología atómica** : Todo debe estár enfocado a su reutilización e independecia, de tal forma que se puedan construir atomos, celulas,   etc... por medio de la reutilización de los mismos.
 - **Testing** : Las pruebas unitarias, son obligatorias para componentes transversales.
+- **Token Interceptor** : Existe un interceptor global para firmar las peticiones con el JWT para la gestión de permisos dentro de la aplicación.
+- **Guardianes** : Si un guardian va a ser reutilizado en varias partes de la aplicación, debe ir en la carpeta
+core/guards, de lo contrario se debe crear una carpeta guards en el módulo específico en donde se requiera el mismo.
 - **i18n** : La aplicación será internacionalizable, por lo que todo texto a renderizar, bien sea en el .html o por data binding, debe ser declarado en su respectivo archivo de idioma "es.json" O "en.json", etc...
 - **Eventos** : Para el manejo de eventos, se debe garantizar que los eventListeners, o las subscripciones sean cerradas una vez cumplan su función o deje de utilizarse el componente/módulo para efectos de rendimiento. En caso de necesitarse manejar muchos eventos para diferentes acciones, es obligatorio la utilización del **patrón de delegación de eventos**.
 
